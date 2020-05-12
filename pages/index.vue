@@ -23,6 +23,7 @@
       <consultation-desk-reports-number-card />
       <!--<metro-card />
       <agency-card-->
+      <yamaguchi-map-card />
     </v-row>
   </div>
 </template>
@@ -41,6 +42,7 @@ import Patients from '@/data/patients.json'
 import Inspections from '@/data/inspections.json'
 import Hospitalizations from '@/data/hospitalizations.json'
 import Querents from '@/data/querents.json'
+import MapUpdate from '@/data/map_update.json'
 
 // import formatGraph from '@/utils/formatGraph'
 // import formatTable from '@/utils/formatTable'
@@ -52,6 +54,7 @@ import TestedNumberCard from '@/components/cards/TestedNumberCard.vue'
 import ConsultationDeskReportsNumberCard from '@/components/cards/ConsultationDeskReportsNumberCard.vue'
 // import MetroCard from '@/components/cards/MetroCard.vue'
 // import AgencyCard from '@/components/cards/AgencyCard.vue'
+import YamaguchiMapCard from '@/components/cards/YamaguchiMapCard.vue'
 
 export default {
   components: {
@@ -63,7 +66,8 @@ export default {
     ConfirmedCasesAttributesCard,
     ConfirmedCasesDetailsCard,
     // TelephoneAdvisoryReportsNumberCard,
-    ConsultationDeskReportsNumberCard
+	ConsultationDeskReportsNumberCard,
+	YamaguchiMapCard
     // MetroCard,
     // AgencyCard
   },
@@ -84,6 +88,7 @@ export default {
 	  Inspections,
 	  Hospitalizations,
 	  Querents,
+	  MapUpdate,
       // dischargesGraph,
       headerItem: {
         icon: 'mdi-chart-timeline-variant',

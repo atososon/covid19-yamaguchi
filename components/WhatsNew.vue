@@ -12,7 +12,7 @@
           mdi-bullhorn
         </v-icon>
         <external-link
-          url="https://www.pref.yamaguchi.lg.jp/cms/a15200/kansensyou/202004170001.html"
+          url="https://www.pref.yamaguchi.lg.jp/cms/a10900/corona/202005050001.html"
         >
           {{ $t('山口県緊急事態宣言について') }}
         </external-link>

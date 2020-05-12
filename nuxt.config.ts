@@ -29,6 +29,9 @@ const config: Configuration = {
 	querentsUrl:
       process.env.QUERENTS_URL ||
 	  'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/querents.json',
+	mapupdateUrl:
+      process.env.QUERENTS_URL ||
+	  'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/map_update.json',
   },
   /*
    ** Headers of the page
@@ -278,7 +281,8 @@ const config: Configuration = {
         '/cards/number-of-reports-to-covid19-telephone-advisory-center',
         '/cards/number-of-reports-to-covid19-consultation-desk',
         '/cards/predicted-number-of-toei-subway-passengers',
-        '/cards/agency'
+		'/cards/agency',
+		'/cards/map-in-yamaguchi'
       ]
 
       const routes: string[] = []

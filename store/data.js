@@ -7,6 +7,7 @@ import Patients from '@/data/patients.json'
 import Inspections from '@/data/inspections.json'
 import Hospitalizations from '@/data/hospitalizations.json'
 import Querents from '@/data/querents.json'
+import MapUpdate from '@/data/map_update.json'
 
 export const state = () => ({
   //data: Data
@@ -17,6 +18,7 @@ export const state = () => ({
   inspections: Inspections,
   hospitalizations: Hospitalizations,
   querents: Querents,
+  mapupdate: MapUpdate,
 })
 
 export const mutations = {
@@ -28,7 +30,8 @@ export const mutations = {
 	state.patients = payload.patients,
 	state.inspections = payload.inspections,
 	state.hospitalizations = payload.hospitalizations,
-	state.querents = payload.querents
+	state.querents = payload.querents,
+	state.mapupdate = payload.mapupdate
   }
 }
 
@@ -43,6 +46,7 @@ export const actions = {
 	  inspections: Inspections,
 	  hospitalizations: Hospitalizations,
 	  querents: Querents,
+	  mapupdate: MapUpdate,
     }
     await axios.get(process.env.lastupdateUrl).then(res => {
       // payload.data.contacts = res.data.contacts
@@ -77,6 +81,9 @@ export const actions = {
 	})
 	await axios.get(process.env.querentsUrl).then(res => {
 		payload.querents = res.data
+	})
+	await axios.get(process.env.mapupdateUrl).then(res => {
+		payload.mapupdate = res.data
 	})
     context.commit('getData', payload)
   }
