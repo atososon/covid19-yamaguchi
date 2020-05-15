@@ -12,9 +12,9 @@
           mdi-bullhorn
         </v-icon>
         <external-link
-          url="https://www.pref.yamaguchi.lg.jp/cms/a10900/corona/202005050001.html"
+          url="https://www.pref.yamaguchi.lg.jp/cms/a10900/corona/202005150001.html"
         >
-          {{ $t('山口県緊急事態宣言について') }}
+          {{ $t('山口県緊急事態宣言の解除について') }}
         </external-link>
       </span>
     </div>
@@ -98,8 +98,8 @@ export default Vue.extend({
       }
     }
     .WhatsNew-link-to-emergency-page {
-      background-color: $emergency;
-      border: 2px solid $emergency;
+      background-color: $noemergency;
+      border: 2px solid $noemergency;
       color: $gray-2;
       border-radius: 4px;
       font-size: 1rem;
