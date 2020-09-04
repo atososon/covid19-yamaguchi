@@ -536,14 +536,17 @@
         width="279"
       />
       <text class="n" transform="translate(901 60)">
-        <tspan x="-65" y="0">新型コロナ</tspan>
-        <tspan x="-78" y="29">受診相談窓口</tspan>
+        <tspan x="-47" y="0">山口県</tspan>
+        <tspan x="-72" y="29">新型コロナ</tspan>
+        <tspan x="-100" y="58">専用相談ダイアル</tspan>
       </text>
+      <!--
       <text class="c" transform="translate(901 128)">
         <tspan x="-56" y="0">帰国者・接触者</tspan>
         <tspan x="-64" y="18">電話相談センター</tspan>
       </text>
-	  <!--
+      -->
+      <!--
       <g transform="translate(-53 -101)">
         <rect
           class="i"
@@ -555,12 +558,26 @@
       </g>
 	  -->
       <g transform="translate(-45 -100)">
-        <text class="p" transform="translate(946 469)">
-          <tspan x="-54" y="0">土日祝 9時から17時</tspan>
+        <text class="p" transform="translate(946 269)">
+          <tspan x="-70" y="0">毎日24時間対応</tspan>
         </text>
       </g>
-      <line class="r" transform="translate(783.5 225.5)" x2="236" />
-      <line class="r" transform="translate(783.5 338.5)" x2="236" />
+      <g transform="translate(0 7)">
+        <text class="an" transform="translate(913 206)">
+          <tspan x="-84.051" y="0">083-902-2510</tspan>
+        </text>
+        <g transform="translate(800 184)">
+          <path class="d" d="M0,0H26V26H0Z" />
+          <path
+            class="e"
+            d="M6.922,11.439a16.411,16.411,0,0,0,7.139,7.139L16.444,16.2a1.077,1.077,0,0,1,1.1-.26,12.358,12.358,0,0,0,3.867.617A1.087,1.087,0,0,1,22.5,17.636v3.781A1.087,1.087,0,0,1,21.417,22.5,18.415,18.415,0,0,1,3,4.083,1.087,1.087,0,0,1,4.083,3H7.875A1.087,1.087,0,0,1,8.958,4.083a12.307,12.307,0,0,0,.617,3.867A1.087,1.087,0,0,1,9.3,9.056Z"
+            transform="translate(0.25 0.25)"
+          />
+        </g>
+      </g>
+      <!-- <line class="r" transform="translate(783.5 225.5)" x2="236" />
+      <line class="r" transform="translate(783.5 338.5)" x2="236" /> -->
+      <!--
       <g transform="translate(-64 -102)">
         <text class="p" transform="translate(965 363)">
           <tspan x="-54" y="0">平日（日中）</tspan>
@@ -571,6 +588,7 @@
           <tspan x="-47.997" y="0">土日祝 終日</tspan>
         </text>
       </g>
+      -->
       <g class="ay" transform="matrix(1, 0, 0, 1, -3, -3)">
         <g class="g" transform="translate(3 3)">
           <path
@@ -1166,19 +1184,7 @@
           />
         </g>
       </g>
-      <g transform="translate(0 7)">
-        <text class="an" transform="translate(913 456)">
-          <tspan x="-84.051" y="0">083-933-3502</tspan>
-        </text>
-        <g transform="translate(800 434)">
-          <path class="d" d="M0,0H26V26H0Z" />
-          <path
-            class="e"
-            d="M6.922,11.439a16.411,16.411,0,0,0,7.139,7.139L16.444,16.2a1.077,1.077,0,0,1,1.1-.26,12.358,12.358,0,0,0,3.867.617A1.087,1.087,0,0,1,22.5,17.636v3.781A1.087,1.087,0,0,1,21.417,22.5,18.415,18.415,0,0,1,3,4.083,1.087,1.087,0,0,1,4.083,3H7.875A1.087,1.087,0,0,1,8.958,4.083a12.307,12.307,0,0,0,.617,3.867A1.087,1.087,0,0,1,9.3,9.056Z"
-            transform="translate(0.25 0.25)"
-          />
-        </g>
-      </g>
+      <!--
       <g transform="translate(0 -19)">
         <g transform="translate(19 5)">
           <a
@@ -1201,7 +1207,8 @@
           </g>
         </g>
       </g>
-	  <!--
+      -->
+      <!--
       <text class="an" transform="translate(633 679)">
         <tspan x="-79.555" y="0">0570-550571</tspan>
       </text>
