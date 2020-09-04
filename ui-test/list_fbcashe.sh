@@ -1,0 +1,22 @@
+#!/bin/bash
+
+source ../.env # you have to set FB_ACCESS_TOKEN='{your access token}' in the .env file
+
+LANGS="en zh-cn zh-tw ko ja-basic"
+
+PAGES=$(cat <<EOT
+details-of-confirmed-cases
+number-of-confirmed-cases
+attributes-of-confirmed-cases
+number-of-tested
+number-of-reports-to-covid19-consultation-desk
+map-in-yamaguchi
+EOT
+)
+
+for page in $PAGES; do
+  for lang in $LANGS; do
+    echo "https://yamaguchi.stopcovid19.jp/${lang}/cards/${page}"
+  done
+  echo "https://yamaguchi.stopcovid19.jp/cards/${page}"
+done

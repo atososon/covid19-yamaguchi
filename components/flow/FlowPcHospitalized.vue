@@ -9,7 +9,7 @@
   </div>
 </template>
 
-<i18n src="./FlowPcHospitalized.i18n.json"></i18n>
+<!-- i18n src="./FlowPcHospitalized.i18n.json"></i18n -->
 
 <style module lang="scss">
 .FlowPcHospitalized {

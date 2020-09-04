@@ -2,21 +2,37 @@
   <div class="WhatsNew">
     <div class="WhatsNew-heading">
       <h3 class="WhatsNew-title">
-        <v-icon size="24" class="WhatsNew-title-icon">
+        <v-icon size="2.4rem" class="WhatsNew-title-icon">
           mdi-information
         </v-icon>
         {{ $t('最新のお知らせ') }}
       </h3>
-      <span class="WhatsNew-link-to-emergency-page">
-        <v-icon size="20" class="WhatsNew-link-to-emergency-page-icon">
-          mdi-bullhorn
-        </v-icon>
-        <external-link
-          url="https://www.pref.yamaguchi.lg.jp/cms/a10900/corona/202005150001.html"
-        >
-          {{ $t('山口県緊急事態宣言の解除について') }}
-        </external-link>
-      </span>
+
+      <div v-if="stateOfEmergency">
+        <span class="WhatsNew-link-to-emergency-page">
+          <external-link
+            url="https://www.pref.yamaguchi.lg.jp/cms/a10900/corona/202005050001.html"
+          >
+            <v-icon size="2rem" class="WhatsNew-link-to-emergency-page-icon">
+              mdi-bullhorn
+            </v-icon>
+            {{ $t('山口県緊急事態措置について') }}
+          </external-link>
+        </span>
+      </div>
+      <div v-else-if="stopEmergency">
+        <span class="WhatsNew-link-to-end-of-emergency-page">
+          <external-link
+            url="https://www.pref.yamaguchi.lg.jp/cms/a10900/corona/202005150001.html"
+          >
+            <v-icon size="2rem" class="WhatsNew-link-to-emergency-page-icon">
+              mdi-bullhorn
+            </v-icon>
+            {{ $t('山口県緊急事態措置の解除について') }}
+          </external-link>
+        </span>
+      </div>
+
     </div>
     <ul class="WhatsNew-list">
       <li v-for="(item, i) in items" :key="i" class="WhatsNew-list-item">
@@ -37,7 +53,7 @@
             <v-icon
               v-if="!isInternalLink(item.url)"
               class="WhatsNew-item-ExternalLinkIcon"
-              size="12"
+              size="1.2rem"
             >
               mdi-open-in-new
             </v-icon>
@@ -51,10 +67,12 @@
 <script lang="ts">
 import Vue from 'vue'
 import ExternalLink from '@/components/ExternalLink.vue'
+
 import {
   convertDateByCountryPreferTimeFormat,
   convertDateToISO8601Format
 } from '@/utils/formatDate'
+
 export default Vue.extend({
   components: { ExternalLink },
   props: {
@@ -62,6 +80,13 @@ export default Vue.extend({
       type: Array,
       required: true
     }
+  },
+  data() {
+    const stateOfEmergency = false // 緊急宣言自体発令中か?
+    const data = {
+      stateOfEmergency
+    }
+    return data
   },
   methods: {
     isInternalLink(path: string): boolean {
@@ -80,14 +105,17 @@ export default Vue.extend({
 <style lang="scss">
 .WhatsNew {
   @include card-container();
+
   padding: 10px;
   margin-bottom: 20px;
+
   .WhatsNew-heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 12px;
+
     .WhatsNew-title {
       display: flex;
       align-items: center;
@@ -97,68 +125,109 @@ export default Vue.extend({
         margin: 3px;
       }
     }
-    .WhatsNew-link-to-emergency-page {
-      background-color: $noemergency;
-      border: 2px solid $noemergency;
-      color: $gray-2;
+
+    .WhatsNew-link-to-end-of-emergency-page {
+      background-color: $gray-4;
+      border: 2px solid $gray-4;
+      color: $gray-1;
       border-radius: 4px;
-      font-size: 1rem;
       padding: 4px 8px;
+      display: inline-flex;
+      @include font-size(16);
       &:hover {
         background-color: $white;
         border-radius: 4px;
       }
+
       .ExternalLink {
         color: $gray-2 !important;
         text-decoration: none;
+        margin: -10px;
+        padding: 10px;
       }
+
       > span {
         @include button-text('sm');
       }
+
+      @include lessThan($small) {
+        margin-top: 4px;
+      }
+    }
+
+    .WhatsNew-link-to-emergency-page {
+      background-color: $emergency;
+      // background-color: $gray-4;
+      border: 2px solid $emergency;
+      //border: 2px solid $gray-4;
+      color: $gray-1;
+      border-radius: 4px;
+      padding: 4px 8px;
+      display: inline-flex;
+      @include font-size(16);
+      &:hover {
+        background-color: $white;
+        border-radius: 4px;
+      }
+
+      .ExternalLink {
+        color: $gray-2 !important;
+        text-decoration: none;
+        margin: -10px;
+        padding: 10px;
+      }
+
+      > span {
+        @include button-text('sm');
+      }
+
       @include lessThan($small) {
         margin-top: 4px;
       }
     }
   }
+
   .WhatsNew-list {
     padding-left: 0;
     list-style-type: none;
+
     &-item {
       &-anchor {
         text-decoration: none;
         margin: 5px;
-        font-size: 14px;
+        @include font-size(14);
+
         @include lessThan($medium) {
           display: flex;
           flex-wrap: wrap;
         }
+
         &-time {
           flex: 0 0 90px;
+
           @include lessThan($medium) {
             flex: 0 0 100%;
           }
+
           color: $gray-1;
         }
+
         &-link {
           flex: 0 1 auto;
+
           @include text-link();
+
           @include lessThan($medium) {
             padding-left: 8px;
           }
         }
+
         &-ExternalLinkIcon {
           margin-left: 2px;
           color: $gray-3 !important;
         }
       }
     }
-  }
-}
-
-@media screen and (max-width: 575px) {
-  div.WhatsNew {
-    height: 250px;
-    overflow-y: scroll;
   }
 }
 </style>

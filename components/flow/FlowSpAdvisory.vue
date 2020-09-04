@@ -1,12 +1,15 @@
 <template>
   <div :class="$style.container">
     <h4 id="consult" :class="[$style.heading, $style.fzXLarge]">
-      {{ $t('新型コロナ受診相談窓口') }}
+      {{ $t('山口県新型コロナウイルス感染症専用相談ダイアル') }}
+      <!--
       <small :class="[$style.break, $style.fzRegular, $style.mt5]">{{
         $t('帰国者・接触者電話相談センター')
       }}</small>
+      -->
     </h4>
     <dl>
+      <!--
       <div :class="$style.daytime">
         <dt :class="[$style.title, $style.fzMedium]">
           {{ $t('平日（日中）') }}
@@ -24,12 +27,13 @@
           </a>
         </dd>
       </div>
+      -->
       <div>
         <dt>
           <ul :class="[$style.night]">
             <li>
               <span :class="[$style.fzMedium, $style.break, $style.mb10]">
-                {{ $t('土日祝 9時から17時') }}
+                {{ $t('毎日24時間対応') }}
               </span>
             </li>
           </ul>
@@ -39,7 +43,7 @@
             <span :class="$style.icon">
               <PhoneIcon alt="Phone" />
             </span>
-            <a href="tel:0353204592">083-933-3502</a>
+            <a href="tel:083-902-2510">083-902-2510</a>
           </div>
         </dd>
       </div>
@@ -47,7 +51,7 @@
   </div>
 </template>
 
-<i18n src="./FlowSpAdvisory.i18n.json"></i18n>
+<!-- i18n src="./FlowSpAdvisory.i18n.json"></i18n -->
 
 <script lang="ts">
 import PhoneIcon from '@/static/flow/responsive/phone.svg'

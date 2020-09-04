@@ -36,7 +36,7 @@
   </div>
 </template>
 
-<i18n src="./FlowSpSuspect.i18n.json"></i18n>
+<!-- i18n src="./FlowSpSuspect.i18n.json"></i18n -->
 
 <script lang="ts">
 import ArrowForwardIcon from '@/static/flow/responsive/arrow_forward.svg'

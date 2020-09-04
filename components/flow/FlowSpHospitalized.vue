@@ -12,7 +12,7 @@
   </div>
 </template>
 
-<i18n src="./FlowSpHospitalized.i18n.json"></i18n>
+<!-- i18n src="./FlowSpHospitalized.i18n.json"></i18n -->
 
 <script lang="ts">
 import HotelIcon from '@/static/flow/responsive/hotel.svg'

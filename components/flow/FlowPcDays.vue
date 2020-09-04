@@ -104,7 +104,7 @@
   </div>
 </template>
 
-<i18n src="./FlowPcDays.i18n.json"></i18n>
+<!-- i18n src="./FlowPcDays.i18n.json"></i18n -->
 
 <style module lang="scss">
 .Flow {
@@ -145,9 +145,6 @@
         margin: 16px 0;
         text-align: left;
         list-style: none;
-        &Item + &Item {
-          margin-top: 14px;
-        }
         &Item {
           display: flex;
           align-items: center;
@@ -168,6 +165,9 @@
           &PregnantWoman::before {
             background-image: url(/flow/pregnant_woman-24px.svg);
           }
+        }
+        &Item + &Item {
+          margin-top: 14px;
         }
       }
     }

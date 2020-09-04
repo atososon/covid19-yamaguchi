@@ -14,13 +14,13 @@
         <PrinterIcon v-else aria-hidden="true" />
       </div>
       <span class="PrinterButton-Text">
-        {{ $t('print') }}
+        {{ $t('印刷する') }}
       </span>
     </v-btn>
   </div>
 </template>
 
-<i18n src="./PrinterButton.i18n.json"></i18n>
+<!-- i18n src="./PrinterButton.i18n.json"></i18n -->
 
 <script>
 import PrinterIcon from '@/static/printer.svg'

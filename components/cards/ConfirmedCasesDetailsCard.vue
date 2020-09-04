@@ -4,9 +4,9 @@
       :title="$t('検査陽性者の状況')"
       :title-id="'details-of-confirmed-cases'"
       :date="Hospitalizations.last_update"
-	    :url="'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19'"
+      :url="'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19'"
     >
-      <confirmed-cases-table
+      <confirmed-cases-details-table
         :aria-label="$t('検査陽性者の状況')"
         v-bind="confirmedCases"
       />
@@ -14,48 +14,34 @@
   </v-col>
 </template>
 
-<i18n>
-{
-  "ja": {
-    "検査陽性者の状況": "検査陽性者の状況"
-  },
-  "en": {
-    "検査陽性者の状況": "Details of confirmed cases"
-  },
-  "zh-cn": {
-    "検査陽性者の状況": "确诊案例状况"
-  },
-  "zh-tw": {
-    "検査陽性者の状況": "確診案例狀況"
-  },
-  "ko": {
-    "検査陽性者の状況": "확진자의 현황"
-  },
-  "ja-basic": {
-    "検査陽性者の状況": "びょうきの ひとは いま"
-  }
-}
-</i18n>
-
 <script>
-//import Hospitalizations from '@/data/hospitalizations.json'
+import dayjs from 'dayjs'
+//import Data from '@/data/data.json'
 import formatConfirmedCases from '@/utils/formatConfirmedCases'
 import SvgCard from '@/components/SvgCard.vue'
-import ConfirmedCasesTable from '@/components/ConfirmedCasesTable.vue'
+import ConfirmedCasesDetailsTable from '@/components/ConfirmedCasesDetailsTable.vue'
+import OpenDataLink from '@/components/OpenDataLink.vue'
 
 export default {
   components: {
     SvgCard,
-    ConfirmedCasesTable
+    ConfirmedCasesDetailsTable,
+    OpenDataLink
   },
   data() {
-	const Hospitalizations = this.$store.state.data.hospitalizations
+    const Hospitalizations = this.$store.state.data.hospitalizations
+    console.log(Hospitalizations)
     // 検査陽性者の状況
     const confirmedCases = formatConfirmedCases(Hospitalizations.data[0])
 
+    //const updatedAt = dayjs(Data.main_summary.children[0].date).format(
+    //  'YYYY/MM/DD HH:mm'
+    //)
+
     const data = {
       Hospitalizations,
-      confirmedCases
+      confirmedCases,
+      //updatedAt
     }
     return data
   }

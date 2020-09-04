@@ -74,7 +74,7 @@
   </div>
 </template>
 
-<i18n src="./FlowSpElder.i18n.json"></i18n>
+<!-- i18n src="./FlowSpElder.i18n.json"></i18n -->
 
 <script lang="ts">
 import AccessibleIcon from '@/static/flow/responsive/accessible.svg'

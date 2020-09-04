@@ -7,44 +7,25 @@
       :chart-data="patientsGraph"
       :date="PatientsCnt.last_update"
       :unit="$t('人')"
-      :url="
-        'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19'
-      "
-    />
+      :by-date="true"
+      :url="'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19'"
+    >
+      <template v-slot:description>
+        <ul>
+          <li>
+            {{ $t('（注）山口県公式サイトにて公表された日を基準とする') }}
+          </li>
+          <li>
+            {{ $t('（注）医療機関等が行った検査も含む') }}
+          </li>
+        </ul>
+      </template>
+    </time-bar-chart>
   </v-col>
 </template>
 
-<i18n>
-{
-  "ja": {
-    "陽性患者数": "陽性患者数",
-    "人": "人"
-  },
-  "en": {
-    "陽性患者数": "Number of confirmed cases",
-    "人": "persons"
-  },
-  "zh-cn": {
-    "陽性患者数": "确诊人数",
-    "人": "人"
-  },
-  "zh-tw": {
-    "陽性患者数": "確診人數",
-    "人": "人"
-  },
-  "ko": {
-    "陽性患者数": "확진자 수",
-    "人": "인"
-  },
-  "ja-basic": {
-    "陽性患者数": "びょうきの ひとの かず",
-    "人": "にん"
-  }
-}
-</i18n>
-
 <script>
-//import PatientsCnt from '@/data/patients_cnt.json'
+//import Data from '@/data/data.json'
 import formatGraph from '@/utils/formatGraph'
 import TimeBarChart from '@/components/TimeBarChart.vue'
 
@@ -53,7 +34,7 @@ export default {
     TimeBarChart
   },
   data() {
-	const PatientsCnt = this.$store.state.data.patientscnt
+    const PatientsCnt = this.$store.state.data.patientscnt
     // 感染者数グラフ
     const patientsGraph = formatGraph(PatientsCnt.data)
 

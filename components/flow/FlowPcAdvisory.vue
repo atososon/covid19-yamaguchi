@@ -4,14 +4,16 @@
       <div :class="$style.AdvisoryContents">
         <div>
           <span :class="$style.AdvisoryContentsTitle">{{
-            $t('新型コロナ受診相談窓口')
+            $t('山口県新型コロナウイルス感染症専用相談ダイアル')
           }}</span>
         </div>
+        <!--
         <div :class="[$style.AdvisoryContentsColsSentense, 'mt-4']">
           {{ $t('帰国者・接触者 電話相談センター') }}
         </div>
+        -->
       </div>
-
+      <!--
       <div :class="$style.AdvisoryContents">
         <div class="py-8">
           <div :class="$style.AdvisoryContentsTitle2">
@@ -37,11 +39,11 @@
           </div>
         </div>
       </div>
-
+      -->
       <div :class="$style.AdvisoryContents">
         <div class="pt-8">
           <div :class="$style.AdvisoryContentsTitle2">
-            {{ $t('土日祝 9時から17時') }}
+            {{ $t('毎日24時間対応') }}
           </div>
         </div>
         <div
@@ -51,8 +53,8 @@
             'mt-1'
           ]"
         >
-          <a :class="$style.AdvisoryTelephone" href="tel:0353204592">
-            083-933-3502
+          <a :class="$style.AdvisoryTelephone" href="tel:083-902-2510">
+            083-902-2510
           </a>
         </div>
       </div>
@@ -60,7 +62,7 @@
   </div>
 </template>
 
-<i18n src="./FlowPcAdvisory.i18n.json"></i18n>
+<!-- i18n src="./FlowPcAdvisory.i18n.json"></i18n -->
 
 <style module lang="scss">
 .Advisory {

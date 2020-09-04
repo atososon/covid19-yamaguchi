@@ -3,7 +3,7 @@
     <slot />
     <v-icon
       class="ExternalLinkIcon"
-      :size="iconSize"
+      :size="`${iconSize / 10}rem`"
       :aria-label="this.$t('別タブで開く')"
       role="img"
       :aria-hidden="false"
@@ -23,6 +23,7 @@
 </style>
 <script lang="ts">
 import Vue from 'vue'
+
 export default Vue.extend({
   props: {
     url: {

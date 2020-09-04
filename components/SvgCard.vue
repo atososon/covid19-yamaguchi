@@ -1,7 +1,7 @@
 <template>
   <data-view :title="title" :title-id="titleId" :date="date" :url="url">
     <template v-slot:button>
-	  <!--
+      <!--
       <p class="Graph-Desc">
         {{
           $t(
@@ -9,13 +9,16 @@
           )
         }}
       </p>
-	  -->
+	    -->
     </template>
     <slot />
+    <template v-slot:footer>
+      <open-data-link v-show="url" :url="url" />
+    </template>
   </data-view>
 </template>
 
-<i18n src="./SvgCard.i18n.json"></i18n>
+<!-- i18n src="./SvgCard.i18n.json"></i18n -->
 
 <style lang="scss" scoped>
 /*
@@ -29,7 +32,8 @@
     font-size: 12px;
     color: $gray-3;
   }
-}*/
+}
+*/
 .DataView {
   &Desc {
     margin-top: 10px;
@@ -42,9 +46,10 @@
 
 <script>
 import DataView from '@/components/DataView.vue'
+import OpenDataLink from '@/components/OpenDataLink.vue'
 
 export default {
-  components: { DataView },
+  components: { DataView, OpenDataLink },
   props: {
     title: {
       type: String,

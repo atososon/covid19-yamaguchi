@@ -25,23 +25,27 @@
   </v-btn-toggle>
 </template>
 
-<i18n src="./DataSelector.i18n.json"></i18n>
-
 <style lang="scss">
 .DataSelector {
   margin-top: 20px;
   border: 1px solid $gray-4;
   background-color: $white;
+
   &-Button {
     border: none !important;
     margin: 2px;
     border-radius: 4px !important;
     height: 24px !important;
-    font-size: 12px !important;
     color: $gray-1 !important;
     background-color: $white !important;
+    @include font-size(12, true);
+
     &::before {
       background-color: inherit;
+    }
+
+    &:focus {
+      outline: dotted $gray-3 1px;
     }
   }
 
@@ -52,8 +56,10 @@
 }
 </style>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
   name: 'DataSelector',
   props: {
     value: {
@@ -62,11 +68,11 @@ export default {
     },
     targetId: {
       type: String,
-      default: val => {
+      default: (val: string | null) => {
         // TODO: type は NullableString 型をとり、default: null とする
         return val && val !== '' ? val : null
       }
     }
   }
-}
+})
 </script>

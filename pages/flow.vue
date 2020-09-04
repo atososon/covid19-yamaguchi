@@ -31,7 +31,7 @@
   </div>
 </template>
 
-<i18n src="./flow.i18n.json"></i18n>
+<!-- i18n src="./flow.i18n.json"></i18n -->
 
 <script>
 import CovidIcon from '@/static/covid.svg'
