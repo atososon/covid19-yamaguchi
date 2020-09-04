@@ -28,7 +28,8 @@ const options: NuxtVueI18n.Options.AllOptionsInterface = {
           month: 'short',
           day: 'numeric'
         }
-      },
+      }
+      /*
       en: {
         dateTime: {
           year: 'numeric',
@@ -47,7 +48,7 @@ const options: NuxtVueI18n.Options.AllOptionsInterface = {
           month: 'short',
           day: 'numeric'
         }
-      }
+      } */
     },
     formatFallbackMessages: true
   },
@@ -61,7 +62,8 @@ const options: NuxtVueI18n.Options.AllOptionsInterface = {
       iso: 'ja-JP',
       file: 'ja.json',
       description: 'Japanese'
-    },
+    }
+    /*
     {
       code: 'en',
       name: 'English',
@@ -69,6 +71,7 @@ const options: NuxtVueI18n.Options.AllOptionsInterface = {
       file: 'en.json',
       description: 'English'
     },
+    */
     // {
     //   code: 'zh-cn',
     //   name: '简体中文',
@@ -76,13 +79,13 @@ const options: NuxtVueI18n.Options.AllOptionsInterface = {
     //   file: 'zh_CN.json',
     //   description: 'Simplified Chinese'
     // },
-    //{
+    // {
     //  code: 'zh-tw',
     //  name: '繁體中文',
     //  iso: 'zh-TW',
     //  file: 'zh_TW.json',
     //  description: 'Traditional Chinese'
-    //},
+    // },
     // {
     //   code: 'ko',
     //   name: '한국어',
