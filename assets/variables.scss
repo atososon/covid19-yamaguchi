@@ -11,7 +11,14 @@ $gray-4: #d9d9d9;
 $gray-5: #f8f9fa;
 $white: #fff;
 $link: #006ca8;
+// ----------------------------
+// twitter brand guidelines
+// https://about.twitter.com/content/dam/about-twitter/company/brand-resources/en_us/Twitter_Brand_Guidelines_V2_0.pdf
+$twitter: #1da1f2;
+$twitter-gray: #657786;
+// ----------------------------
 $emergency: #f29739; // original: #FFE200;
+$main-color: $green-1; // main color
 
 // ==================
 // shadow
@@ -112,12 +119,12 @@ $z-index-map: (
   display: inline-block;
   border-radius: 4px;
   background-color: $white;
-  border: 1px solid $green-1;
-  color: $green-1;
+  border: 1px solid $main-color;
+  color: $main-color;
   cursor: pointer;
 
   &:hover {
-    background-color: $green-1;
+    background-color: $main-color;
     color: $white;
 
     > i {
@@ -176,3 +183,10 @@ $expansion-panel-header-padding: 10px 0;
 $expansion-panel-header-min-height: 26px;
 $expansion-panel-active-header-min-height: 26px;
 $expansion-panel-header-font-size: .875rem;
+
+// Data tables
+// https://vuetifyjs.com/en/components/data-tables/
+$data-table-regular-header-font-size: 1.15rem;
+$data-table-regular-header-height: 36px;
+$data-table-regular-row-font-size: 1.15rem;
+$data-table-regular-row-height: 36px;

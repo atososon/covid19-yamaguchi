@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/named
 import { NuxtVueI18n } from 'nuxt-i18n'
 
 const options: NuxtVueI18n.Options.AllOptionsInterface = {

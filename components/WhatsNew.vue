@@ -32,7 +32,16 @@
           </external-link>
         </span>
       </div>
-
+      <div v-if="stateOfTwitter">
+        <span class="WhatsNew-link-to-twitter">
+          <external-link url="https://twitter.com/CoronaYamaguchi">
+            <v-icon size="2rem" class="TwitterIcon">
+              mdi-twitter
+            </v-icon>
+            {{ $t('最新情報はこちら') }}
+          </external-link>
+        </span>
+      </div>
     </div>
     <ul class="WhatsNew-list">
       <li v-for="(item, i) in items" :key="i" class="WhatsNew-list-item">
@@ -83,8 +92,10 @@ export default Vue.extend({
   },
   data() {
     const stateOfEmergency = false // 緊急宣言自体発令中か?
+    const stateOfTwitter = true
     const data = {
-      stateOfEmergency
+      stateOfEmergency,
+      stateOfTwitter
     }
     return data
   },
@@ -175,6 +186,51 @@ export default Vue.extend({
         text-decoration: none;
         margin: -10px;
         padding: 10px;
+      }
+
+      > span {
+        @include button-text('sm');
+      }
+
+      @include lessThan($small) {
+        margin-top: 4px;
+      }
+    }
+    .WhatsNew-link-to-twitter {
+      * {
+        //border: medium solid black;
+        //align-self: center;
+      }
+      .TwitterIcon {
+        color: $white !important;
+      }
+      background-color: $twitter;
+      border: 2px solid $twitter;
+      border-radius: 4px;
+      padding: 4px 8px;
+      display: inline-flex;
+      @include font-size(16);
+      &:hover {
+        background-color: $white;
+        border-radius: 4px;
+      }
+      .ExternalLinkIcon {
+        color: $white !important;
+      }
+      .ExternalLink {
+        color: $white !important;
+        text-decoration: none;
+        margin: -10px;
+        padding: 10px;
+        &:hover {
+          color: $twitter-gray !important;
+          .TwitterIcon {
+            color: $twitter-gray !important;
+          }
+          .ExternalLinkIcon {
+            color: $gray-2 !important;
+          }
+        }
       }
 
       > span {

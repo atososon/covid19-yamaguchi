@@ -1,7 +1,7 @@
 import dayjs from 'dayjs'
 
 const headers = [
-  { text: 'No', value: 'No'},
+  { text: 'No', value: 'No' },
   { text: '公表日', value: '公表日' },
   { text: '居住地', value: '居住地' },
   { text: '年代', value: '年代' },
@@ -49,7 +49,7 @@ export default (data: DataType[]) => {
   data.forEach(d => {
     const releaseDate = dayjs(d['公表日'])
     const TableRow: TableDataType = {
-      No: d['No'],
+      No: d.No,
       公表日: releaseDate.isValid() ? releaseDate.format('M/D') : '不明',
       居住地: d['居住地'] ?? '調査中',
       年代: d['年代'] ?? '不明',

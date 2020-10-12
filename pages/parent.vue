@@ -8,7 +8,7 @@
         <external-link
           url="https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202005280004.html#1"
           :icon-size="24"
-        >{{ $t('児童生徒・保護者の皆さまへ（山口県）') }}
+          >{{ $t('児童生徒・保護者の皆さまへ（山口県）') }}
         </external-link>
       </h3>
     </static-card>
@@ -17,7 +17,11 @@
         <external-link
           url="https://www.mext.go.jp/a_menu/coronavirus/index.html"
           :icon-size="24"
-        >{{ $t('新型コロナウイルスに関連した感染症対策に関する対応について（文部科学省）') }}
+          >{{
+            $t(
+              '新型コロナウイルスに関連した感染症対策に関する対応について（文部科学省）'
+            )
+          }}
         </external-link>
       </h3>
     </static-card>
@@ -28,28 +32,28 @@
           <external-link
             url="https://www.mext.go.jp/a_menu/ikusei/gakusyushien/index_00001.htm"
             :icon-size="16"
-          >{{ $t('学習支援コンテンツポータルサイト（文部科学省）') }}
+            >{{ $t('学習支援コンテンツポータルサイト（文部科学省）') }}
           </external-link>
         </li>
         <li>
           <external-link
             url="https://www.learning-innovation.go.jp/covid_19/page/5/"
             :icon-size="16"
-          >{{ $t('学びを止めない未来の教室（経済産業省）') }}
+            >{{ $t('学びを止めない未来の教室（経済産業省）') }}
           </external-link>
         </li>
         <li>
           <external-link
             url="https://www.pref.yamaguchi.lg.jp/cms/a50900/index/yamaguchi.html"
             :icon-size="16"
-          >{{ $t('やまぐち学習支援プログラム（やまぐちっ子the Movie追加）') }}
+            >{{ $t('やまぐち学習支援プログラム（やまぐちっ子the Movie追加）') }}
           </external-link>
         </li>
         <li>
           <external-link
             url="http://shien.ysn21.jp/contents/student/gakusyu/index.html"
             :icon-size="16"
-          >{{ $t('学習コンテンツ（やまぐち総合教育支援サイト）') }}
+            >{{ $t('学習コンテンツ（やまぐち総合教育支援サイト）') }}
           </external-link>
         </li>
       </ul>
@@ -76,7 +80,7 @@
           <external-link
             url="https://tokyodouga.jp/lViN9C_BS-0.html"
             :icon-size="16"
-          >{{ $t('【参考】感染症予防のための正しい手洗い方法（動画）') }}
+            >{{ $t('【参考】感染症予防のための正しい手洗い方法（動画）') }}
           </external-link>
         </li>
         <li>
@@ -91,12 +95,24 @@
     <static-card>
       <h3>{{ $t('感染症を疑う場合の対応') }}</h3>
       <ul>
-        <li>{{ $t('息苦しさ（呼吸困難）、強いだるさ（倦怠感）、高熱等の強い症状がある場合、または発熱や咳などの比較的軽い風邪の症状が続いている場合は、各保健所にご相談ください。') }}</li>
-        <li>{{ $t('各保健所の電話番号等については「新型コロナウイルスに関連する各種相談窓口について」をご確認ください。') }}</li>
+        <li>
+          {{
+            $t(
+              '息苦しさ（呼吸困難）、強いだるさ（倦怠感）、高熱等の強い症状がある場合、または発熱や咳などの比較的軽い風邪の症状が続いている場合は、各保健所にご相談ください。'
+            )
+          }}
+        </li>
+        <li>
+          {{
+            $t(
+              '各保健所の電話番号等については「新型コロナウイルスに関連する各種相談窓口について」をご確認ください。'
+            )
+          }}
+        </li>
         <external-link
           url="https://www.pref.yamaguchi.lg.jp/cms/a11000/sodan/koronasoudan.html"
           :icon-size="16"
-        >{{ $t('「新型コロナウイルスに関連する各種相談窓口について」') }}
+          >{{ $t('「新型コロナウイルスに関連する各種相談窓口について」') }}
         </external-link>
       </ul>
     </static-card>
@@ -107,14 +123,14 @@
           <external-link
             url="https://www.pref.yamaguchi.lg.jp/cmsdata/6/9/1/6919f905dd62276886c5647ec3d44f17.pdf"
             :icon-size="16"
-          >{{ $t('子育て中の保護者のための相談窓口一覧（チラシ）') }}
+            >{{ $t('子育て中の保護者のための相談窓口一覧（チラシ）') }}
           </external-link>
-          </li>
+        </li>
         <li>
           <external-link
             url="https://www.pref.yamaguchi.lg.jp/cmsdata/a/9/2/a92e8ea17c49a05ef2671a1c36581eb9.pdf"
             :icon-size="16"
-          >{{ $t('子どものための相談窓口一覧（チラシ）') }}
+            >{{ $t('子どものための相談窓口一覧（チラシ）') }}
           </external-link>
         </li>
       </ul>

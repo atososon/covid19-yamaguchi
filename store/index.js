@@ -1,6 +1,6 @@
 export const actions = {
-	async nuxtClientInit({ dispatch }) {
-	  // code
-	  await dispatch('data/getDataAction')
-	}
+  async nuxtClientInit({ dispatch }) {
+    // code
+    await dispatch('data/getDataAction')
   }
+}

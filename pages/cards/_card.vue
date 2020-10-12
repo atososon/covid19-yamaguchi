@@ -19,20 +19,17 @@
       "
     /><!-- ok -->
     <yamaguchi-map-card
-      v-else-if="
-        this.$route.params.card ==
-          'map-in-yamaguchi'
-      "
+      v-else-if="this.$route.params.card == 'map-in-yamaguchi'"
     />
   </div>
 </template>
 
 <script>
-//import Data from '@/data/data.json'
+// import Data from '@/data/data.json'
 // import MetroData from '@/data/metro.json'
 // import agencyData from '@/data/agency.json'
 // ↓ import patientData from '@/data/patient.json'
-//import patientData from '@/data/patients.json'
+// import patientData from '@/data/patients.json'
 // import PositiveByDiagnosedData from '@/data/positive_by_diagnosed.json'
 // import PositiveRate from '@/data/positive_rate.json'
 import ConfirmedCasesDetailsCard from '@/components/cards/ConfirmedCasesDetailsCard.vue'
@@ -40,7 +37,7 @@ import ConfirmedCasesNumberCard from '@/components/cards/ConfirmedCasesNumberCar
 import ConfirmedCasesAttributesCard from '@/components/cards/ConfirmedCasesAttributesCard.vue'
 // import ConfirmedCasesByMunicipalitiesCard from '@/components/cards/ConfirmedCasesByMunicipalitiesCard.vue'
 import TestedNumberCard from '@/components/cards/TestedNumberCard.vue'
-//import InspectionPersonsNumberCard from '@/components/cards/InspectionPersonsNumberCard.vue'
+// import InspectionPersonsNumberCard from '@/components/cards/InspectionPersonsNumberCard.vue'
 // import TelephoneAdvisoryReportsNumberCard from '@/components/cards/TelephoneAdvisoryReportsNumberCard.vue'
 import ConsultationDeskReportsNumberCard from '@/components/cards/ConsultationDeskReportsNumberCard.vue'
 // import MetroCard from '@/components/cards/MetroCard.vue'

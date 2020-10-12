@@ -165,7 +165,7 @@ export default {
 }
 .Title {
   @include font-size(28);
-  color: $green-1;
+  color: $main-color;
   &Small {
     @include font-size(20);
   }

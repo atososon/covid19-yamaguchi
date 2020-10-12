@@ -8,9 +8,7 @@
       :date="Inspections.last_update"
       :show-button="false"
       :unit="$t('人')"
-      :url="
-        'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19'
-      "
+      :url="'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19'"
     >
       <template v-slot:description>
         <ul>
@@ -31,7 +29,7 @@
 </template>
 
 <script>
-//import Inspections from '@/data/inspections.json'
+// import Inspections from '@/data/inspections.json'
 import formatGraph from '@/utils/formatGraph'
 import TimeBarChart from '@/components/TimeBarChart.vue'
 
@@ -40,7 +38,7 @@ export default {
     TimeBarChart
   },
   data() {
-	const Inspections = this.$store.state.data.inspections
+    const Inspections = this.$store.state.data.inspections
     // 検査数グラフ
     const inspectionsGraph = formatGraph(Inspections.data)
 

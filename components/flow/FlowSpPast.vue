@@ -153,7 +153,7 @@ export default {
   }
   .source {
     display: block;
-    color: $green-1;
+    color: $main-color;
     &:last-child {
       margin-top: px2vw(10);
     }

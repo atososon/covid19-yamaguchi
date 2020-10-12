@@ -1,4 +1,4 @@
-<template>
+<template xmlns:slot="http://www.w3.org/1999/XSL/Transform">
   <v-card ref="dataView" class="DataView" :loading="loading">
     <div class="DataView-Inner">
       <div class="DataView-Header">
@@ -325,11 +325,11 @@ export default Vue.extend({
     .scrollable {
       overflow-x: scroll;
       &::-webkit-scrollbar {
-        height: 4px;
-        background-color: rgba(0, 0, 0, 0.01);
+        height: 10px;
+        background-color: rgba(0, 0, 0, 0.04);
       }
       &::-webkit-scrollbar-thumb {
-        background-color: rgba(0, 0, 0, 0.07);
+        background-color: rgba(0, 0, 0, 0.12);
       }
     }
     .sticky-legend {

@@ -62,10 +62,10 @@ export default {
     date: {
       type: String,
       default: ''
-	},
-	url: {
+    },
+    url: {
       type: String,
-      //required: false,
+      // required: false,
       default: ''
     }
   }

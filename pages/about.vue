@@ -11,11 +11,11 @@
       }}<br />
 
       <br />
-      <i18n path="複製・改変が許されたオープンソースライセンスで公開されている、{covid19-web}の{covid19-github}を利用しています。">
+      <i18n
+        path="複製・改変が許されたオープンソースライセンスで公開されている、{covid19-web}の{covid19-github}を利用しています。"
+      >
         <template v-slot:covid19-web>
-          <external-link
-            url="https://stopcovid19.metro.tokyo.lg.jp/"
-          >
+          <external-link url="https://stopcovid19.metro.tokyo.lg.jp/">
             {{ $t('東京都公式新型コロナウイルス対策サイト') }}
           </external-link>
         </template>
@@ -25,8 +25,8 @@
           >
             {{ $t('仕組み') }}
           </external-link>
-        </template>
-      </i18n><br />
+        </template> </i18n
+      ><br />
 
       <br />
       {{
@@ -253,9 +253,7 @@
             place="facebookYamaguchi"
           >
             {{
-            $t(
-            '山口県公認 新型コロナウイルス感染症対策サイト facebookページ'
-            )
+              $t('山口県公認 新型コロナウイルス感染症対策サイト facebookページ')
             }}
           </a>
         </i18n>
@@ -271,9 +269,7 @@
           </a>
         </i18n>
       </p>
-
     </static-card>
-
   </div>
 </template>
 

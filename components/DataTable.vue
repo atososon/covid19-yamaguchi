@@ -122,6 +122,10 @@
     padding: 0;
   }
 }
+
+.text-start {
+  white-space: nowrap;
+}
 </style>
 
 <script lang="ts">

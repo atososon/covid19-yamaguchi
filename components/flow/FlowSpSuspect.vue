@@ -44,12 +44,13 @@ import PhoneIcon from '@/static/flow/responsive/phone.svg'
 import SentimentIcon from '@/static/flow/responsive/sentiment_very_dissatisfied.svg'
 
 export default {
+  // eslint-disable-next-line vue/no-unused-components
   components: { ArrowForwardIcon, PhoneIcon, SentimentIcon }
 }
 </script>
 
 <style module lang="scss">
-@import '@/components/flow/flow_sp.scss';
+// @import '@/components/flow/flow_sp.scss';
 
 .rectContainer {
   // suspect

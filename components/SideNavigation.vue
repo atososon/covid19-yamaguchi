@@ -161,7 +161,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import { TranslateResult } from 'vue-i18n'
-import LanguageSelector from '@/components/LanguageSelector.vue'
+// import LanguageSelector from '@/components/LanguageSelector.vue'
 import MenuList from '@/components/MenuList.vue'
 
 type Item = {
@@ -173,7 +173,7 @@ type Item = {
 
 export default Vue.extend({
   components: {
-    LanguageSelector,
+    // LanguageSelector,
     MenuList
   },
   props: {
@@ -199,12 +199,12 @@ export default Vue.extend({
         {
           title: this.$t('新型コロナウイルス感染症　関連情報'),
           link:
-            'https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202004240002.html'
+            'https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202007270002.html'
         },
         {
           title: this.$t('新型コロナウイルスに関連する相談窓口'),
           link:
-            'https://www.pref.yamaguchi.lg.jp/cms/a11000/sodan/koronasoudan.html',
+            'https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202004240002.html',
           divider: true
         },
         //

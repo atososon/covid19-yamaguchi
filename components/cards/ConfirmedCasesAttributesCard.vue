@@ -8,9 +8,7 @@
         :chart-option="{}"
         :date="Patients.last_update"
         :info="sumInfoOfPatients"
-        :url="
-          'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19'
-        "
+        :url="'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19'"
         :source="$t('オープンデータを入手')"
         :custom-sort="customSort"
       />
@@ -19,7 +17,7 @@
 </template>
 
 <script>
-//import Data from '@/data/data.json'
+// import Data from '@/data/data.json'
 import formatGraph from '@/utils/formatGraph'
 import formatTable from '@/utils/formatTable'
 import DataTable from '@/components/DataTable.vue'
@@ -43,7 +41,7 @@ export default {
       sText: this.$t('{date}の累計', {
         date: patientsGraph[patientsGraph.length - 1].label
       }),
-      unit: this.$t('人')
+      unit: this.$t('例')
     }
 
     // 陽性患者の属性 ヘッダー翻訳
@@ -56,8 +54,8 @@ export default {
       row['居住地'] = this.$t(row['居住地'])
       row['性別'] = this.$t(row['性別'])
       row['退院'] = this.$t(row['退院'])
-      const num = row['No']
-      row['No'] = this.$t('{num}例', { num })
+      const num = row.No
+      row.No = this.$t('{num}例', { num })
 
       if (row['年代'].substr(-1, 1) === '代') {
         const age = row['年代'].substring(0, 2)

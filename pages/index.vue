@@ -17,7 +17,7 @@
     <static-info
       class="mb-4"
       :urlNotUse="localePath('/flow')"
-      url="https://www.pref.yamaguchi.lg.jp/cms/a11000/sodan/koronasoudan.html"
+      url="https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202004240002.html"
       :text="$t('自分や家族の症状に不安や心配があればまずは電話相談をどうぞ')"
     />
     <card-row class="DataBlock">
@@ -61,8 +61,8 @@ import PageHeader from '@/components/PageHeader.vue'
 import WhatsNew from '@/components/WhatsNew.vue'
 import StaticInfo from '@/components/StaticInfo.vue'
 import CardRow from '@/components/cards/CardRow.vue'
-//import Data from '@/data/data.json'
-import News from '@/data/news.json'
+// import Data from '@/data/data.json'
+// import News from '@/data/news.json'
 import PatientsCnt from '@/data/patients_cnt.json'
 import Patients from '@/data/patients.json'
 import Inspections from '@/data/inspections.json'
@@ -74,7 +74,7 @@ import ConfirmedCasesNumberCard from '@/components/cards/ConfirmedCasesNumberCar
 import ConfirmedCasesAttributesCard from '@/components/cards/ConfirmedCasesAttributesCard.vue'
 // import ConfirmedCasesByMunicipalitiesCard from '@/components/cards/ConfirmedCasesByMunicipalitiesCard.vue'
 import TestedNumberCard from '@/components/cards/TestedNumberCard.vue'
-//import TestedCasesDetailsCard from '@/components/cards/TestedCasesDetailsCard.vue'
+// import TestedCasesDetailsCard from '@/components/cards/TestedCasesDetailsCard.vue'
 // import InspectionPersonsNumberCard from '@/components/cards/InspectionPersonsNumberCard.vue'
 // import TestedNumberCard from '@/components/cards/TestedNumberCard.vue'
 // import TelephoneAdvisoryReportsNumberCard from '@/components/cards/TelephoneAdvisoryReportsNumberCard.vue'
@@ -84,7 +84,7 @@ import ConsultationDeskReportsNumberCard from '@/components/cards/ConsultationDe
 // import AgencyCard from '@/components/cards/AgencyCard.vue'
 // import PositiveNumberByDiagnosedDateCard from '@/components/cards/PositiveNumberByDiagnosedDateCard.vue'
 import YamaguchiMapCard from '@/components/cards/YamaguchiMapCard.vue'
-import { convertDatetimeToISO8601Format } from '@/utils/formatDate'
+// import { convertDatetimeToISO8601Format } from '@/utils/formatDate'
 
 export default Vue.extend({
   components: {
@@ -97,7 +97,7 @@ export default Vue.extend({
     ConfirmedCasesNumberCard,
     ConfirmedCasesAttributesCard,
     // ConfirmedCasesByMunicipalitiesCard,
-    //TestedCasesDetailsCard,
+    // TestedCasesDetailsCard,
     TestedNumberCard,
     // InspectionPersonsNumberCard,
     // TestedNumberCard,
@@ -124,8 +124,8 @@ export default Vue.extend({
         title: this.$t('山口県内の最新感染動向'),
         date: LastUpdate
       },
-      newsItems: News.newsItems,
-      //displayForTokyo: false
+      newsItems: News.newsItems
+      // displayForTokyo: false
     }
     return data
   },

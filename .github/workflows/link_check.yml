@@ -1,0 +1,13 @@
+name: Broken Link Notifications
+
+on:
+  schedule:
+    - cron: "0 15 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: link check
+        run: bash link_check/main.sh
