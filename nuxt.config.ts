@@ -7,7 +7,8 @@ const autoprefixer = require('autoprefixer')
 const environment = process.env.NODE_ENV || 'development'
 
 const config: Configuration = {
-  mode: 'universal',
+  // mode: 'universal',
+  target: 'static',
   /*
    ** Environments
    */
