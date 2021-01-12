@@ -35,13 +35,11 @@ export default {
     const patientsTable = formatTable(Patients.data)
 
     const sumInfoOfPatients = {
-      lText: patientsGraph[
-        patientsGraph.length - 1
-      ].cumulative.toLocaleString(),
+      lText: patientsTable.datasets[0].No,
       sText: this.$t('{date}の累計', {
         date: patientsGraph[patientsGraph.length - 1].label
       }),
-      unit: this.$t('例')
+      unit: this.$t('例目')
     }
 
     // 陽性患者の属性 ヘッダー翻訳
@@ -55,7 +53,7 @@ export default {
       row['性別'] = this.$t(row['性別'])
       row['退院'] = this.$t(row['退院'])
       const num = row.No
-      row.No = this.$t('{num}例', { num })
+      row.No = this.$t('{num}例目', { num })
 
       if (row['年代'].substr(-1, 1) === '代') {
         const age = row['年代'].substring(0, 2)

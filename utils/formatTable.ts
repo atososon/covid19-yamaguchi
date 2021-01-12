@@ -50,7 +50,7 @@ export default (data: DataType[]) => {
     const releaseDate = dayjs(d['公表日'])
     const TableRow: TableDataType = {
       No: d.No,
-      公表日: releaseDate.isValid() ? releaseDate.format('M/D') : '不明',
+      公表日: releaseDate.isValid() ? releaseDate.format('YYYY/MM/DD') : '不明',
       居住地: d['居住地'] ?? '調査中',
       年代: d['年代'] ?? '不明',
       性別: d['性別'] ?? '不明',

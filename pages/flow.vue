@@ -139,7 +139,7 @@
           <dl :class="$style.contact">
             <dt>{{ $t('毎日24時間対応') }}</dt>
             <dd>
-              <a :class="$style.tel" href="tel:0570-550571">
+              <a :class="$style.tel" href="tel:083-902-2510">
                 <icon-phone :class="$style.icon" aria-hidden="true" />
                 083-902-2510</a
               >
@@ -172,7 +172,7 @@
           <dl :class="$style.contact">
             <dt>{{ $t('毎日24時間対応') }}</dt>
             <dd>
-              <a :class="$style.tel" href="tel:0570-550571">
+              <a :class="$style.tel" href="tel:083-902-2510">
                 <icon-phone :class="$style.icon" aria-hidden="true" />
                 083-902-2510</a
               >
