@@ -38,6 +38,7 @@ import LineIcon from '@/static/line.svg'
 import TwitterIcon from '@/static/twitter.svg'
 import YoutubeIcon from '@/static/youtube.svg'
 import FoodIcon from '@/static/food.svg'
+import VaccineIcon from '@/static/vaccine.svg'
 
 type MenuItem = {
   icon?: string
@@ -55,7 +56,8 @@ export default Vue.extend({
     LineIcon,
     TwitterIcon,
     YoutubeIcon,
-    FoodIcon
+    FoodIcon,
+    VaccineIcon
   },
   props: {
     items: {
