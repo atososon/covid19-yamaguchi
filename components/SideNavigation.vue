@@ -167,6 +167,7 @@ type Item = {
   title: TranslateResult
   link: string
   divider?: boolean
+  onlyJPContent?: boolean
 }
 
 export default Vue.extend({
@@ -197,7 +198,8 @@ export default Vue.extend({
           icon: 'VaccineIcon',
           title: this.$t('ワクチン接種に関するお知らせ'),
           link:
-            'https://www.pref.yamaguchi.lg.jp/cms/a15200/kansensyou/ncorona-vaccine.html'
+            'https://www.pref.yamaguchi.lg.jp/cms/a15200/kansensyou/ncorona-vaccine.html',
+          onlyJPContent: true
         },
         {
           icon: 'MaskTrashIcon',

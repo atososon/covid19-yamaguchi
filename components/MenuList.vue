@@ -6,7 +6,11 @@
       :class="['MenuList-Item', { '-border': item.divider }]"
       @click="$emit('click', $event)"
     >
-      <component :is="linkTag(item.link)" v-bind="linkAttrs(item.link)">
+      <component
+        :is="linkTag(item.link)"
+        v-if="!item.onlyJPContent || $i18n.locale == 'ja'"
+        v-bind="linkAttrs(item.link)"
+      >
         <span v-if="item.icon" class="MenuList-Icon">
           <component :is="iconTag(item.icon)" v-bind="iconAttrs(item.icon)">
             {{ item.icon }}
@@ -45,6 +49,7 @@ type MenuItem = {
   title: string
   link: string
   divider?: boolean
+  onlyJPContent?: boolean
 }
 
 export default Vue.extend({
