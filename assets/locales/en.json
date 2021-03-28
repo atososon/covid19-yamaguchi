@@ -329,5 +329,28 @@
   "クリエイティブ・コモンズ 表示 4.0 ライセンス": " Creative Commons Attribution 4.0 International License",
   "ogp": {
     "og:image": "https://yamaguchi.stopcovid19.jp/ogp.png"
-  }
+  },
+  "山口県新型コロナウイルス感染症専用相談ダイアル": "Yamaguchi Prefecture COVID-19 Hotline",
+  "相談方法は、症状や状況別で3つに分かれます": "Advice offered here is divided into three categories, depending on your symptoms and situation.",
+  "かかりつけ医がいて症状のある方": "You have a primary care doctor and are having symptoms",
+  "かかりつけ医がいない症状のある方": "You do not have a primary care doctor and are having symptoms",
+  "軽い症状があり不安のある方": "You are worried because you are having light symptoms",
+  "かかりつけ医がいて、発熱などの症状がある方": "If you have a primary care doctor and are having symptoms",
+  "日ごろ受診されている医療機関に電話でご相談ください。": "Please get consultation by telephone from the medical institution you usually use.",
+  "軽い症状があるなど不安のある方は、日ごろ受診されている医療機関に電話でご相談ください。": "If you are anxious, please get consultation by telephone from the medical institution you usually use.",
+  "かかりつけ医がいない、発熱などの症状がある方": "If you do not have a primary care doctor and are having symptoms",
+  "症状に関わらず、山口県新型コロナウイルス感染症専用相談ダイアルにご相談ください。": "Regardless of your symptoms, please consult Yamaguchi Prefecture COVID-19 Hotline.",
+  "毎日24時間対応": "Open all day",
+  "電話のおかけ間違いが多くなっております。発信の際は今一度電話番号をお確かめの上、お間違えのないようお願いいたします。": "The number of calls to wrong numbers has been increasing. Please confirm the number before calling in order to prevent calling the wrong number.",
+  "軽い症状があり、不安のある方": "If you feel anxious",
+  "山口県新型コロナウイルス感染症専用相談ダイアルにご相談ください。": "please consult Yamaguchi Prefecture COVID-19 Hotline.",
+  "山口県新型コロナウイルス感染症専用相談ダイアル、またはかかりつけ医によって新型コロナ外来（帰国者・接触者外来）の受診が必要だと判断された方": "If your primary care doctor or Yamaguchi Prefecture COVID-19 Hotline has determined that you require COVID-19 outpatient testing (recent arrivals and those who have been exposed)",
+  "医師が検査の必要性を判断いたします。": "A physician determines that testing is necessary",
+  "マスクをして公共交通機関をできるだけ使わずに受診をしてください。": "Avoid public transportation, wear a mask, and get tested.",
+  "医師により検査が必要だと判断されPCR検査を受けた結果": "The results of the PCR test which was determined necessary by a physician",
+  "陽性の場合": "The result is positive",
+  "感染症指定医療機関等への入院、又は宿泊施設等での療養となります": "You will be hospitalized at a medical institution designated for contagious diseases or housed in a lodging facility for medical treatment and recuperation.",
+  "陰性の場合": "The result is negative",
+  "自宅で安静に過ごし、必要に応じて医療機関を受診してください": "Rest at home and seek treatment at a medical institution if necessary.",
+  "ただし、症状が良くならない場合は再度受診相談窓口またはかかりつけ医に相談してください": "However, if symptoms do not improve, please consult the testing consultation desk or your primary doctor again."
 }
