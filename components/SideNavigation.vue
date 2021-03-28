@@ -196,6 +196,11 @@ export default Vue.extend({
           link: this.localePath('/flow')
         },
         {
+          icon: 'VaccineIcon',
+          title: this.$t('ワクチン接種に関するお知らせ'),
+          link: this.localePath('https://www.pref.yamaguchi.lg.jp/cms/a15200/kansensyou/ncorona-vaccine.html')
+        },
+        {
           icon: 'FoodIcon',
           title: this.$t('県内Go To Eat情報'),
           link: 'https://gotoeat-yamaguchi.com/use/',
