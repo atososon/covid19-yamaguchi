@@ -193,6 +193,11 @@ export default Vue.extend({
           title: this.$t('新型コロナウイルス感染症が心配なときに'),
           link: this.localePath('/flow')
         },
+	{
+	  icon: 'VaccineIcon',
+	  title: this.$t('ワクチン接種に関するお知らせ'),
+	  link: 'https://www.pref.yamaguchi.lg.jp/cms/a15200/kansensyou/ncorona-vaccine.html'
+	},
         {
           icon: 'MaskTrashIcon',
           title: this.$t('ご家庭でのマスク等の捨て方'),
